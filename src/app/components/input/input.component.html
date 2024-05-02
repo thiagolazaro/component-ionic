@@ -1,0 +1,5 @@
+<ion-item color="light" class="ion-margin-bottom">
+  <ion-icon *ngIf="icon" slot="start" [color]="iconColor || 'primary'"  name="{{ icon }}"></ion-icon>
+  <ion-icon *ngIf="type == 'password' || isTogglePassword" [color]="iconColor || 'primary'" slot="end" [name]="passwordOrText ? 'eye-outline' : 'eye-off-outline' " (click)="changeVisibility()"></ion-icon>
+  <ion-input [(ngModel)]="value" type="{{ type }}" placeholder="{{ placeholder }}"></ion-input>
+</ion-item>
